@@ -5,7 +5,7 @@ class Getphones:
         self.model = model
 
     def getIP(self):
-         mydb = mysql.connector.connect( host="10.221.10.130", user="root", password="pw4root", port="3306", database="mydatabase")
+         mydb = mysql.connector.connect( host="localhost", user="root", password="root@123", port="3306", database="mydatabase")
          mycursor = mydb.cursor()
          mycursor.execute("SELECT ipaddress FROM phones WHERE model = '"+self.model+"'")
          myresult = mycursor.next()
